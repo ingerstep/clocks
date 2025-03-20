@@ -1,4 +1,4 @@
-import { ACTION_TYPES } from "@shared/config";
+import { ACTION_TYPES } from "@entities/clock/config";
 
 const { ADD_CLOCK } = ACTION_TYPES;
 

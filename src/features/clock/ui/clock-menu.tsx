@@ -8,6 +8,12 @@ export const ClockMenu = ({
   clocks,
   handleCityChange,
 }: ClockMenuProps) => {
+  const filteredCities = availableCities.filter(
+    (city) =>
+      city === selectedCity ||
+      !clocks.some((c, idx) => idx !== index && c.timezone === city)
+  );
+
   return (
     <select
       value={selectedCity || ""}
@@ -17,16 +23,8 @@ export const ClockMenu = ({
       <option value="" className="text-gray-500">
         Выберите город
       </option>
-      {availableCities.map((city) => (
-        <option
-          key={city}
-          value={city}
-          disabled={
-            city !== selectedCity &&
-            clocks.some((c, idx) => idx !== index && c.timezone === city)
-          }
-          className="text-gray-700"
-        >
+      {filteredCities.map((city) => (
+        <option key={city} value={city} className="text-gray-700">
           {city} (UTC{timezones[city]})
         </option>
       ))}

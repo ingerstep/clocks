@@ -1,4 +1,4 @@
-import { ACTION_TYPES } from "@shared/config";
+import { ACTION_TYPES } from "@entities/clock/config";
 import { ClockActionTypes, ClocksState } from "./types";
 
 const { ADD_CLOCK, REMOVE_CLOCK, SET_TIMEZONE } = ACTION_TYPES;

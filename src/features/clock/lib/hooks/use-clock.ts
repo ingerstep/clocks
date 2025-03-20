@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-import { RootState } from "@shared/config";
+import { RootState } from "@entities/clock/config";
 import { addClock, fetchTimezones, removeClock, setTimezone } from "@entities/clock/lib/actions";
 
 export const useClock = () => {

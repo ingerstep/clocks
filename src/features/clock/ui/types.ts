@@ -10,7 +10,6 @@ export interface Clock {
 export interface ClockMenuProps {
     timezones: { [city: string]: string };
     index: number;
-    // selectedCities: string[];
     selectedCity: string | null;
     clocks: Clock[];
     availableCities: string[];

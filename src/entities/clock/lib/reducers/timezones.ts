@@ -1,4 +1,4 @@
-import { ACTION_TYPES } from '@shared/config';
+import { ACTION_TYPES } from '@entities/clock/config';
 import { TimezonesActionTypes, TimezonesState } from './types';
 
 const { FETCH_TIMEZONES } = ACTION_TYPES;
